@@ -9,61 +9,77 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
     <form action="/pets/orders" method="POST">
 
-        <label>
-            Питомец
-            <select name="petType">
-                <option value="cat">Кот</option>  <!--selected-->
-                <option value="capybara">Капибара</option>
-                <option value="parrot">Попугай</option>
-            </select>
-        </label>
+        <div>
+            <label>
+                Питомец
+                <select name="petType">
+                    <option value="cat">Кот</option>
+                    <option value="capybara">Капибара</option>
+                    <option value="parrot">Попугай</option>
+                </select>
+            </label>
+        </div>
 
-        <label>
-            Пол
-            <select name="gender">
-                <option value="boy" selected>Мужчина</option>
-                <option value="girl">Женщина</option>
-                <!--<option value="none">Не определен</option>-->
-            </select>
-        </label>
+        <div>
+            <label>
+                Пол
+                <select name="gender">
+                    <option value="boy">Мужчина</option>
+                    <option value="girl">Женщина</option>
+                </select>
+            </label>
+        </div>
 
-        <label>
-            Цвет глаз
-            <input type="color" name="eyeColor"> <!--required-->
-        </label>
+        <div>
+            <label>
+                Цвет глаз
+                <input type="color" name="eyeColor">
+            </label>
+        </div>
 
-        <label>
-            Длина хвоста
-            <input type="number" name="tailLength"> <!--required placeholder="Введите длину хвоста" min="7" max="120"-->
-        </label>
+        <div>
+            <label>
+                Длина хвоста
+                <input type="number" name="tailLength" min="7" max="120" required value="7">
+            </label>
+        </div>
 
-        <label>
-            Имя хозяина
-            <input type="text" name="name"> <!--required minlength="3" maxlength="50"-->
-        </label>
+        <div>
+            <label>
+                Имя хозяина
+                <input type="text" name="name" minlength="3" maxlength="50" required value="Kokamido">
+            </label>
+        </div>
 
-        <label>
-            Дата рождения
-            <input type="date" name="dateOfBirth">  <!--required-->
-        </label>
+        <div>
+            <label>
+                Дата рождения
+                <input type="date" name="dateOfBirth" value="2000-01-01" required>
+            </label>
+        </div>
 
-        <label>
-            Почта
-            <input type="email" name="email">  <!--required placeholder="example@mail.ru"-->
-        </label>
+        <div>
+            <label>
+                Почта
+                <input type="email" name="email" required value="example@mail.ru">
+            </label>
+        </div>
 
-        <label>
-            Телефон
-            <input type="tel" name="phone">  <!--required placeholder="89089057278"-->
-        </label>
+        <div>
+            <label>
+                Телефон
+                <input type="tel" name="phone" required value="88005553535">
+            </label>
+        </div>
 
-        <label>
-            <input type="checkbox" name="rules">  <!--value="true" required-->
-            Я согласен продать душу Джунке
-        </label>
+        <div>
+            <label>
+                <input type="checkbox" name="rules" value="true" required>
+                Я согласен продать душу Джунке
+            </label>
+        </div>
 
         <button type="submit" name="submit">
             Отправить
@@ -72,17 +88,6 @@
             Сбросить
         </button>
     </form>
-
-    <!-- petType
-gender
-eyeColor
-tailLength
-name
-dateOfBirth
-email
-phone
-rules
--->
 
 </main>
 </body>
